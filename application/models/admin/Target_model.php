@@ -65,6 +65,24 @@ class Target_model extends CI_Model
         return $query->result();
 
     }
+//joint to get all targets data
+    public function get_targets_detail()
+    {
+    $this->db->select('*');
+    $this->db->from('ci_target'); 
+    $this->db->join('ci_branch', 'ci_branch.branch_id=ci_target.branch_id', 'left');
+    $this->db->join('ci_product', 'ci_product.product_id=ci_target.product_id', 'left');
+    $this->db->order_by('ci_target.target_id','asc');         
+    $query = $this->db->get(); 
+    if($query->num_rows() != 0)
+    {
+        return $query->result_array();
+    }
+    else
+    {
+        return false;
+    }
+}
 
 
 }

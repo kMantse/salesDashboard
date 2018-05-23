@@ -17,7 +17,7 @@
                         </div>
                     <?php endif; ?>
 
-                    <?php echo form_open(base_url('admin/branch/add'), 'class="form-horizontal"');  ?>
+                    <?php echo form_open(site_url('admin/branch/add'), 'class="form-horizontal"');  ?>
                     <div class="form-group">
                         <label for="branch" class="col-sm-2 control-label">Branch</label>
 
