@@ -35,7 +35,7 @@ class Product extends MY_Controller
                 $result = $this->product_model->add_product($data);
                 if ($result) {
                     $this->session->set_flashdata('msg', 'Record is Added Successfully!');
-                    redirect(base_url('admin/product'));
+                    redirect(site_url('admin/product'));
                 }
             }
         } else {
@@ -61,7 +61,7 @@ class Product extends MY_Controller
                 $result = $this->product_model->edit_product($data, $id);
                 if($result){
                     $this->session->set_flashdata('msg', 'Record is Updated Successfully!');
-                    redirect(base_url('admin/product'));
+                    redirect(site_url('admin/product'));
                 }
             }
         }
@@ -75,7 +75,7 @@ class Product extends MY_Controller
     public function del($id = 0){
         $this->db->delete('ci_product', array('product_id' => $id));
         $this->session->set_flashdata('msg', 'Record is Deleted Successfully!');
-        redirect(base_url('admin/product'));
+        redirect(site_url('admin/product'));
     }
 
 }

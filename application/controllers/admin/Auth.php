@@ -40,7 +40,7 @@
 						 	'is_admin_login' => TRUE
 						);
 						$this->session->set_userdata($admin_data);
-						redirect(base_url('admin/dashboard'), 'refresh');
+						redirect(site_url('admin/dashboard'), 'refresh');
 					}
 					else{
 						$data['msg'] = 'Invalid Email or Password!';
@@ -69,7 +69,7 @@
 					$result = $this->auth_model->change_pwd($data, $id);
 					if($result){
 						$this->session->set_flashdata('msg', 'Password has been changed successfully!');
-						redirect(base_url('admin/auth/change_pwd'));
+						redirect(site_url('admin/auth/change_pwd'));
 					}
 				}
 			}
@@ -81,7 +81,7 @@
 				
 		public function logout(){
 			$this->session->sess_destroy();
-			redirect(base_url('admin/auth/login'), 'refresh');
+			redirect(site_url('admin/auth/login'), 'refresh');
 		}
 			
 	}  // end class

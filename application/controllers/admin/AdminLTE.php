@@ -3,7 +3,7 @@
 
 	class AdminLTE extends CI_Controller {
 		public function index(){
-			redirect(base_url('admin/auth'));
+			redirect(site_url('admin/auth'));
 		}
 		public function top_nav(){
 			$this->load->view('admin/adminlte/layout/top-nav');

@@ -44,7 +44,7 @@
 					$result = $this->user_model->add_user($data);
 					if($result){
 						$this->session->set_flashdata('msg', 'Record is Added Successfully!');
-						redirect(base_url('admin/users'));
+						redirect(site_url('admin/users'));
 					}
 				}
 			}
@@ -83,7 +83,7 @@
 					$result = $this->user_model->edit_user($data, $id);
 					if($result){
 						$this->session->set_flashdata('msg', 'Record is Updated Successfully!');
-						redirect(base_url('admin/users'));
+						redirect(site_url('admin/users'));
 					}
 				}
 			}
@@ -97,7 +97,7 @@
 		public function del($id = 0){
 			$this->db->delete('ci_users', array('id' => $id));
 			$this->session->set_flashdata('msg', 'Record is Deleted Successfully!');
-			redirect(base_url('admin/users'));
+			redirect(site_url('admin/users'));
 		}
 
 	}

@@ -35,7 +35,7 @@ class Branch extends MY_Controller
                 $result = $this->branch_model->add_branch($data);
                 if ($result) {
                     $this->session->set_flashdata('msg', 'Record is Added Successfully!');
-                    redirect(base_url('admin/branch'));
+                    redirect(site_url('admin/branch'));
                 }
             }
         } else {
@@ -61,7 +61,7 @@ class Branch extends MY_Controller
                 $result = $this->branch_model->edit_branch($data, $id);
                 if($result){
                     $this->session->set_flashdata('msg', 'Record is Updated Successfully!');
-                    redirect(base_url('admin/branch'));
+                    redirect(site_url('admin/branch'));
                 }
             }
         }
@@ -75,7 +75,7 @@ class Branch extends MY_Controller
     public function del($id = 0){
         $this->db->delete('ci_branch', array('branch_id' => $id));
         $this->session->set_flashdata('msg', 'Record is Deleted Successfully!');
-        redirect(base_url('admin/branch'));
+        redirect(site_url('admin/branch'));
     }
 
 }
