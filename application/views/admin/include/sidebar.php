@@ -37,8 +37,8 @@ $cur_tab = $this->uri->segment(2)==''?'dashboard': $this->uri->segment(2);
             </span>
           </a>
           <ul class="treeview-menu">
-            <li id="dashboard1"><a href="<?= base_url('admin/dashboard'); ?>"><i class="fa fa-circle-o"></i> Dashboard</a></li>
-            <li id="dashboard2"><a href="<?= base_url('admin/dashboard2/'); ?>"><i class="fa fa-circle-o"></i> Dashboard V2</a></li>
+            <li id="dashboard1"><a href="<?= site_url('admin/dashboard'); ?>"><i class="fa fa-circle-o"></i> Dashboard</a></li>
+            <li id="dashboard2"><a href="<?= site_url('admin/dashboard2/'); ?>"><i class="fa fa-circle-o"></i> Dashboard V2</a></li>
           </ul>
         </li>
       </ul>
@@ -52,8 +52,8 @@ $cur_tab = $this->uri->segment(2)==''?'dashboard': $this->uri->segment(2);
               </span>
             </a>
             <ul class="treeview-menu">
-              <li id="add_user"><a href="<?= base_url('admin/users/add'); ?>"><i class="fa fa-circle-o"></i> Add User</a></li>
-              <li id="view_users" class=""><a href="<?= base_url('admin/users'); ?>"><i class="fa fa-circle-o"></i> View Users</a></li>
+              <li id="add_user"><a href="<?= site_url('admin/users/add'); ?>"><i class="fa fa-circle-o"></i> Add User</a></li>
+              <li id="view_users" class=""><a href="<?= site_url('admin/users'); ?>"><i class="fa fa-circle-o"></i> View Users</a></li>
             </ul>
           </li>
           <li id="product" class="treeview">
@@ -64,8 +64,8 @@ $cur_tab = $this->uri->segment(2)==''?'dashboard': $this->uri->segment(2);
               </span>
               </a>
               <ul class="treeview-menu">
-                  <li id="add_product"><a href="<?= base_url('admin/product/add'); ?>"><i class="fa fa-circle-o"></i> Add Product</a></li>
-                  <li id="view_product" class=""><a href="<?= base_url('admin/product'); ?>"><i class="fa fa-circle-o"></i> View Product</a></li>
+                  <li id="add_product"><a href="<?= site_url('admin/product/add'); ?>"><i class="fa fa-circle-o"></i> Add Product</a></li>
+                  <li id="view_product" class=""><a href="<?= site_url('admin/product'); ?>"><i class="fa fa-circle-o"></i> View Product</a></li>
               </ul>
           </li>
         <li id="branch" class="treeview">
@@ -76,8 +76,8 @@ $cur_tab = $this->uri->segment(2)==''?'dashboard': $this->uri->segment(2);
               </span>
             </a>
             <ul class="treeview-menu">
-                <li id="add_branch"><a href="<?= base_url('admin/branch/add'); ?>"><i class="fa fa-circle-o"></i> Add Branch</a></li>
-                <li id="view_branch" class=""><a href="<?= base_url('admin/branch'); ?>"><i class="fa fa-circle-o"></i> View Branch</a></li>
+                <li id="add_branch"><a href="<?= site_url('admin/branch/add'); ?>"><i class="fa fa-circle-o"></i> Add Branch</a></li>
+                <li id="view_branch" class=""><a href="<?= site_url('admin/branch'); ?>"><i class="fa fa-circle-o"></i> View Branch</a></li>
             </ul>
         </li>
         <li id="branch" class="treeview">
@@ -88,8 +88,8 @@ $cur_tab = $this->uri->segment(2)==''?'dashboard': $this->uri->segment(2);
               </span>
             </a>
             <ul class="treeview-menu">
-                <li id="add_target"><a href="<?= base_url('admin/target/add'); ?>"><i class="fa fa-circle-o"></i> Add Target</a></li>
-                <li id="view_product" class=""><a href="<?= base_url('admin/branch'); ?>"><i class="fa fa-circle-o"></i> View Product</a></li>
+                <li id="add_target"><a href="<?= site_url('admin/target/add'); ?>"><i class="fa fa-circle-o"></i> Add Target</a></li>
+                <li id="view_target" class=""><a href="<?= site_url('admin/target'); ?>"><i class="fa fa-circle-o"></i> View Target</a></li>
             </ul>
         </li>
           <li id="adminlte" class="treeview">
@@ -101,15 +101,15 @@ $cur_tab = $this->uri->segment(2)==''?'dashboard': $this->uri->segment(2);
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="<?= base_url('adminlte/top_nav'); ?>"><i class="fa fa-circle-o"></i> Top Navigation</a></li>
-            <li><a href="<?= base_url('adminlte/boxed'); ?>"><i class="fa fa-circle-o"></i> Boxed</a></li>
-            <li><a href="<?= base_url('adminlte/fixed'); ?>"><i class="fa fa-circle-o"></i> Fixed</a></li>
-            <li><a href="<?= base_url('adminlte/collapsed_sidebar'); ?>/"><i class="fa fa-circle-o"></i> Collapsed Sidebar</a></li>
+            <li><a href="<?= site_url('adminlte/top_nav'); ?>"><i class="fa fa-circle-o"></i> Top Navigation</a></li>
+            <li><a href="<?= site_url('adminlte/boxed'); ?>"><i class="fa fa-circle-o"></i> Boxed</a></li>
+            <li><a href="<?= site_url('adminlte/fixed'); ?>"><i class="fa fa-circle-o"></i> Fixed</a></li>
+            <li><a href="<?= site_url('adminlte/collapsed_sidebar'); ?>/"><i class="fa fa-circle-o"></i> Collapsed Sidebar</a></li>
           </ul>
         </li>
 
          <li id="widgets">
-          <a href="<?= base_url('adminlte/widgets'); ?>">
+          <a href="<?= site_url('adminlte/widgets'); ?>">
             <i class="fa fa-th"></i> <span>Widgets</span>
             <span class="pull-right-container">
               <small class="label pull-right bg-green">new</small>
@@ -125,10 +125,10 @@ $cur_tab = $this->uri->segment(2)==''?'dashboard': $this->uri->segment(2);
             </span>
           </a>
           <ul class="treeview-menu">
-            <li id="chartjs"><a href="<?= base_url('adminlte/chartjs'); ?>"><i class="fa fa-circle-o"></i> ChartJS</a></li>
-            <li id="morris"><a href="<?= base_url('adminlte/morris'); ?>"><i class="fa fa-circle-o"></i> Morris</a></li>
-            <li id="flot"><a href="<?= base_url('adminlte/flot'); ?>"><i class="fa fa-circle-o"></i> Flot</a></li>
-            <li id="inline"><a href="<?= base_url('adminlte/inline'); ?>"><i class="fa fa-circle-o"></i> Inline charts</a></li>
+            <li id="chartjs"><a href="<?= site_url('adminlte/chartjs'); ?>"><i class="fa fa-circle-o"></i> ChartJS</a></li>
+            <li id="morris"><a href="<?= site_url('adminlte/morris'); ?>"><i class="fa fa-circle-o"></i> Morris</a></li>
+            <li id="flot"><a href="<?= site_url('adminlte/flot'); ?>"><i class="fa fa-circle-o"></i> Flot</a></li>
+            <li id="inline"><a href="<?= site_url('adminlte/inline'); ?>"><i class="fa fa-circle-o"></i> Inline charts</a></li>
           </ul>
         </li>
          <li id="ui" class="treeview">
@@ -140,12 +140,12 @@ $cur_tab = $this->uri->segment(2)==''?'dashboard': $this->uri->segment(2);
             </span>
           </a>
           <ul class="treeview-menu">
-            <li id="general"><a href="<?= base_url('adminlte/general'); ?>"><i class="fa fa-circle-o"></i> General</a></li>
-            <li id="icons"><a href="<?= base_url('adminlte/icons'); ?>"><i class="fa fa-circle-o"></i> Icons</a></li>
-            <li id="buttons"><a href="<?= base_url('adminlte/buttons'); ?>"><i class="fa fa-circle-o"></i> Buttons</a></li>
-            <li id="sliders"><a href="<?= base_url('adminlte/sliders'); ?>"><i class="fa fa-circle-o"></i> Sliders</a></li>
-            <li id="timeline"><a href="<?= base_url('adminlte/timeline'); ?>"><i class="fa fa-circle-o"></i> Timeline</a></li>
-            <li id="modals"><a href="<?= base_url('adminlte/modals'); ?>"><i class="fa fa-circle-o"></i> Modals</a></li>
+            <li id="general"><a href="<?= site_url('adminlte/general'); ?>"><i class="fa fa-circle-o"></i> General</a></li>
+            <li id="icons"><a href="<?= site_url('adminlte/icons'); ?>"><i class="fa fa-circle-o"></i> Icons</a></li>
+            <li id="buttons"><a href="<?= site_url('adminlte/buttons'); ?>"><i class="fa fa-circle-o"></i> Buttons</a></li>
+            <li id="sliders"><a href="<?= site_url('adminlte/sliders'); ?>"><i class="fa fa-circle-o"></i> Sliders</a></li>
+            <li id="timeline"><a href="<?= site_url('adminlte/timeline'); ?>"><i class="fa fa-circle-o"></i> Timeline</a></li>
+            <li id="modals"><a href="<?= site_url('adminlte/modals'); ?>"><i class="fa fa-circle-o"></i> Modals</a></li>
           </ul>
         </li>
          <li id="forms" class="treeview">
@@ -156,9 +156,9 @@ $cur_tab = $this->uri->segment(2)==''?'dashboard': $this->uri->segment(2);
             </span>
           </a>
           <ul class="treeview-menu">
-            <li id="general"><a href="<?= base_url('adminlte/general_form'); ?>"><i class="fa fa-circle-o"></i> General Elements</a></li>
-            <li id="advanced"><a href="<?= base_url('adminlte/advanced_form'); ?>"><i class="fa fa-circle-o"></i> Advanced Elements</a></li>
-            <li id="editors"><a href="<?= base_url('adminlte/editors_form'); ?>"><i class="fa fa-circle-o"></i> Editors</a></li>
+            <li id="general"><a href="<?= site_url('adminlte/general_form'); ?>"><i class="fa fa-circle-o"></i> General Elements</a></li>
+            <li id="advanced"><a href="<?= site_url('adminlte/advanced_form'); ?>"><i class="fa fa-circle-o"></i> Advanced Elements</a></li>
+            <li id="editors"><a href="<?= site_url('adminlte/editors_form'); ?>"><i class="fa fa-circle-o"></i> Editors</a></li>
           </ul>
         </li>
         <li id="tables" class="treeview">
@@ -169,12 +169,12 @@ $cur_tab = $this->uri->segment(2)==''?'dashboard': $this->uri->segment(2);
             </span>
           </a>
           <ul class="treeview-menu">
-            <li id="simple-tables"><a href="<?= base_url('adminlte/simple_table'); ?>"><i class="fa fa-circle-o"></i> Simple tables</a></li>
-            <li id="data-tables"><a href="<?= base_url('adminlte/data_table'); ?>"><i class="fa fa-circle-o"></i> Data tables</a></li>
+            <li id="simple-tables"><a href="<?= site_url('adminlte/simple_table'); ?>"><i class="fa fa-circle-o"></i> Simple tables</a></li>
+            <li id="data-tables"><a href="<?= site_url('adminlte/data_table'); ?>"><i class="fa fa-circle-o"></i> Data tables</a></li>
           </ul>
         </li>
         <li id="calender">
-          <a href="<?= base_url('adminlte/calendar'); ?>">
+          <a href="<?= site_url('adminlte/calendar'); ?>">
             <i class="fa fa-calendar"></i> <span>Calendar</span>
             <span class="pull-right-container">
               <small class="label pull-right bg-red">3</small>
@@ -191,14 +191,14 @@ $cur_tab = $this->uri->segment(2)==''?'dashboard': $this->uri->segment(2);
           </a>
           <ul class="treeview-menu" style="display: none;">
             <li id="inbox" class="">
-              <a href="<?= base_url('adminlte/inbox'); ?>">Inbox
+              <a href="<?= site_url('adminlte/inbox'); ?>">Inbox
                 <span class="pull-right-container">
                   <span class="label label-primary pull-right">13</span>
                 </span>
               </a>
             </li>
-            <li id="compose"><a href="<?= base_url('adminlte/compose'); ?>">Compose</a></li>
-            <li id="read"><a href="<?= base_url('adminlte/read_mail'); ?>">Read</a></li>
+            <li id="compose"><a href="<?= site_url('adminlte/compose'); ?>">Compose</a></li>
+            <li id="read"><a href="<?= site_url('adminlte/read_mail'); ?>">Read</a></li>
           </ul>
         </li>
 
@@ -210,15 +210,15 @@ $cur_tab = $this->uri->segment(2)==''?'dashboard': $this->uri->segment(2);
             </span>
           </a>
           <ul class="treeview-menu">
-            <li id="invoice"><a href="<?= base_url('adminlte/invoice'); ?>"><i class="fa fa-circle-o"></i> Invoice</a></li>
-            <li id="profile"><a href="<?= base_url('adminlte/profile'); ?>"><i class="fa fa-circle-o"></i> Profile</a></li>
-            <li id="login"><a target="_blank" href="<?= base_url('adminlte/login'); ?>"><i class="fa fa-circle-o"></i> Login</a></li>
-            <li id="register"><a target="_blank" href="<?= base_url('adminlte/register'); ?>"><i class="fa fa-circle-o"></i> Register</a></li>
-            <li id="lockscreen"><a target="_blank" href="<?= base_url('adminlte/lockscreen'); ?>"><i class="fa fa-circle-o"></i> Lockscreen</a></li>
-            <li id="404-error"><a href="<?= base_url('adminlte/error404'); ?>"><i class="fa fa-circle-o"></i> 404 Error</a></li>
-            <li id="500-error"><a href="<?= base_url('adminlte/errro500'); ?>"><i class="fa fa-circle-o"></i> 500 Error</a></li>
-            <li id="blank-page"><a href="<?= base_url('adminlte/blank'); ?>"><i class="fa fa-circle-o"></i> Blank Page</a></li>
-            <li id="pace"><a href="<?= base_url('adminlte/pace'); ?>"><i class="fa fa-circle-o"></i> Pace Page</a></li>
+            <li id="invoice"><a href="<?= site_url('adminlte/invoice'); ?>"><i class="fa fa-circle-o"></i> Invoice</a></li>
+            <li id="profile"><a href="<?= site_url('adminlte/profile'); ?>"><i class="fa fa-circle-o"></i> Profile</a></li>
+            <li id="login"><a target="_blank" href="<?= site_url('adminlte/login'); ?>"><i class="fa fa-circle-o"></i> Login</a></li>
+            <li id="register"><a target="_blank" href="<?= site_url('adminlte/register'); ?>"><i class="fa fa-circle-o"></i> Register</a></li>
+            <li id="lockscreen"><a target="_blank" href="<?= site_url('adminlte/lockscreen'); ?>"><i class="fa fa-circle-o"></i> Lockscreen</a></li>
+            <li id="404-error"><a href="<?= site_url('adminlte/error404'); ?>"><i class="fa fa-circle-o"></i> 404 Error</a></li>
+            <li id="500-error"><a href="<?= site_url('adminlte/errro500'); ?>"><i class="fa fa-circle-o"></i> 500 Error</a></li>
+            <li id="blank-page"><a href="<?= site_url('adminlte/blank'); ?>"><i class="fa fa-circle-o"></i> Blank Page</a></li>
+            <li id="pace"><a href="<?= site_url('adminlte/pace'); ?>"><i class="fa fa-circle-o"></i> Pace Page</a></li>
           </ul>
         </li>
               <li class="treeview">

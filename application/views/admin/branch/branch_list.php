@@ -10,7 +10,7 @@
         <div class="box-body table-responsive">
             <!--   <table id="example1" class="table table-bordered table-striped "> -->
             <div class="btn-group">
-                <a href="<?=base_url('admin/branch/add')?>" id="editable_table_new" class="btn btn-info pull-right">
+                <a href="<?=site_url('admin/branch/add')?>" id="editable_table_new" class="btn btn-info pull-right">
                     Add Branch <i class="fa fa-plus"></i>
                 </a>
                 </div>
@@ -26,7 +26,7 @@
                     <?php foreach($all_branch as $row): ?>
                         <tr>
                             <td><?php echo $row['branch_name']; ?></td>
-                            <td class="text-right"><a href="<?= base_url('admin/branch/edit/'.$row['branch_id']); ?>" class="btn btn-info btn-flat">Edit</a><a href="<?= base_url('admin/branch/del/'.$row['branch_id']); ?>" class="btn btn-danger btn-flat">Delete</a></td>
+                            <td class="text-right"><a href="<?= site_url('admin/branch/edit/'.$row['branch_id']); ?>" class="btn btn-info btn-flat">Edit</a><a href="<?= site_url('admin/branch/del/'.$row['branch_id']); ?>" class="btn btn-danger btn-flat">Delete</a></td>
                         </tr>
                     <?php endforeach; ?>
                 <?php else: ?>
