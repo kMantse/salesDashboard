@@ -17,7 +17,7 @@
                         </div>
                     <?php endif; ?>
 
-                    <?php echo form_open(base_url('admin/target/add'), 'class="form-horizontal"');  ?>
+                    <?php echo form_open(site_url('admin/target/add'), 'class="form-horizontal"');  ?>
                      <div class="form-group">
                         <label for="product_name" class="col-sm-2 control-label">Product</label>
 
@@ -25,9 +25,9 @@
                             <select  name="product_id" class="form-control">
                                 <option value=""> Select Product</option>
                                 <?php
-                                foreach ($get_all_product as $value)
+                                foreach ($products as $p)
                                 { ?>
-                                    <option value="<?=$value->product_id?>"><?=$value->product_name?></option>
+                                    <option value="<?=$p['product_id']; ?>"><?=$p['product_name'];?></option>
                                 <?php }
                                 ?>
                             </select>
@@ -41,9 +41,9 @@
                             <select  name="branch_id" class="form-control">
                                 <option value="">Select Branch</option>
                                 <?php
-                                foreach ($branch_drop_down as $value)
+                                foreach ($branches as $b)
                                 { ?>
-                                    <option value="<?= $value->branch_id;?>"><?= $value->branch_name;?></option>
+                                    <option value="<?= $b['branch_id'];?>"><?= $b['branch_name'];?></option>
                                 <?php }
                                 ?>
                             </select>
@@ -54,17 +54,17 @@
                         <label for="target_duration" class="col-sm-2 control-label">Duration</label>
 
                         <div class="col-sm-9">
-                            <select name="user_role" class="form-control">
-                                <option value="">Select Role</option>
-                                <option value="">Daily</option>
-                                <option value="">Weekly</option>
-                                <option value="">Monthly</option>
-                                <option value="">YTD</option>
+                            <select name="target_duration" class="form-control">
+                                <option value="">Select Duration</option>
+                                <option value="Daily">Daily</option>
+                                <option value="Weekly">Weekly</option>
+                                <option value="Monthly">Monthly</option>
+                                <option value="YTD">YTD</option>
                             </select>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="mobile_no" class="col-sm-2 control-label">Target Volume</label>
+                        <label for="target_volume" class="col-sm-2 control-label">Target Volume</label>
 
                         <div class="col-sm-9">
                             <input type="number" name="target_volume" class="form-control" id="target_volume" placeholder="">
@@ -72,7 +72,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="mobile_no" class="col-sm-2 control-label">Target Value</label>
+                        <label for="target_value" class="col-sm-2 control-label">Target Value</label>
 
                         <div class="col-sm-9">
                             <input type="number" name="target_value" class="form-control" id="target_value" placeholder="">
